@@ -1,15 +1,18 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RestSharp.Serializers;
 using Web_Json_to_XML.Models;
 
 namespace Web_Json_to_XML.Controllers
 {
     public class BcbController : Controller
     {
-        public async Task<IActionResult> Index()
+        // XML
+        public async Task<IActionResult> GetXML()
         {
             using (var httpClient = new HttpClient())
             {
@@ -21,16 +24,34 @@ namespace Web_Json_to_XML.Controllers
                     var moedasViewModel = JsonConvert.DeserializeObject<MoedasViewModel>(apiResponse);
 
                     // Serializa o objeto MoedasViewModel para XML
-                    XmlSerializer serializer = new XmlSerializer(typeof(MoedasViewModel));
-                    var stringWriter = new StringWriter();
-                    serializer.Serialize(stringWriter, moedasViewModel);
-
-                    // Retorna o resultado da serialização em formato XML para a View
-                    ViewBag.Xml = stringWriter.ToString();
+                    var serializer = new XmlSerializer(typeof(MoedasViewModel));
+                    using (var stringWriter = new StringWriter())
+                    {
+                        using (var xmlWriter = XmlWriter.Create(stringWriter))
+                        {
+                            serializer.Serialize(xmlWriter, moedasViewModel);
+                            ViewBag.Xml = stringWriter.ToString();
+                        }
+                    }
                 }
             }
-            return View("bcbView");
 
+            return Content(ViewBag.Xml, "application/xml");
         }
+
+        public async Task<IActionResult> GetJson()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json&$select=simbolo,nomeFormatado,tipoMoeda"))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+
+                    // Retorna o resultado da API em formato JSON
+                    return Content(apiResponse, "application/json");
+                }
+            }
+        }
+
     }
 }

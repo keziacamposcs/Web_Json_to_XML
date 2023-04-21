@@ -13,10 +13,4 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="System.Collections" Version="4.3.0" />
   </ItemGroup>
-  <ItemGroup>
-    <None Remove="Views\Bcb\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Bcb\" />
-  </ItemGroup>
 </Project>

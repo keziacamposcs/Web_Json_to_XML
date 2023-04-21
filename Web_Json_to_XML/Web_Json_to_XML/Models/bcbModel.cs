@@ -2,6 +2,11 @@
 
 namespace Web_Json_to_XML.Models
 {
+    public class MoedasViewModel
+    {
+        public List<Moeda> value { get; set; }
+    }
+
     public class Moeda
     {
         public string simbolo { get; set; }
@@ -9,8 +14,4 @@ namespace Web_Json_to_XML.Models
         public string tipoMoeda { get; set; }
     }
 
-    public class MoedasViewModel
-    {
-        public List<Moeda> moedas { get; set; }
-    }
 }

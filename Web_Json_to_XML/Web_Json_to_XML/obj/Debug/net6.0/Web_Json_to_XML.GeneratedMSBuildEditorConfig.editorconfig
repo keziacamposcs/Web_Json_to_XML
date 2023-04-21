@@ -16,10 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML/Views/Bcb/bcbView.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmNiL2JjYlZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML/Views/Home/bcbView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9iY2JWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
