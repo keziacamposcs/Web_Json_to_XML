@@ -13,5 +13,4 @@ namespace Web_Json_to_XML.Models
         public string nomeFormatado { get; set; }
         public string tipoMoeda { get; set; }
     }
-
 }

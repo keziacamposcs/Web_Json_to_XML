@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mD2WjSVKCCYZdNu6WU5FbMpdleaGu+4qnYWSqZJtbck=",
+  "Hash": "U590okCvGTJ3AnP9x3JX7iFaiFlCu5oPgVtYPzPvx/U=",
   "Source": "Web_Json_to_XML",
   "BasePath": "_content/Web_Json_to_XML",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML/wwwroot/Images/Web_Json_to_XML.png",
+      "SourceId": "Web_Json_to_XML",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML/wwwroot/",
+      "BasePath": "_content/Web_Json_to_XML",
+      "RelativePath": "Images/Web_Json_to_XML.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/Images/Web_Json_to_XML.png"
     },
     {
       "Identity": "/Users/keziacampos/GitHub/Web_Json_to_XML/Web_Json_to_XML/Web_Json_to_XML/wwwroot/js/site.js",

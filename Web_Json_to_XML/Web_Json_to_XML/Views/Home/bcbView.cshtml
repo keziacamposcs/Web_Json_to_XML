@@ -4,16 +4,49 @@
     ViewData["bcbView"] = "Moedas do BCB em XML";
 }
 
-<h1>Moedas</h1>
+<h1>Conversão de JSON para XML</h1>
 
-<div>
-    <a href="@Url.Action("GetXML", "Bcb")" class="btn btn-primary">Baixar arquivo XML</a>
+<div class="card">
+    <div class="card-header">
+        API da Conversão - Banco Central do Brasil
+    </div>
+    <div class="card-body">
+        <p class="card-text">
+            Nessa conversão foi utilizada a API do BCB:
+            <b>
+                <i>
+                    Dólar comercial (venda e compra) - cotações diárias e Taxas de Câmbio - todos os boletins diários - v1
+                </i>
+            </b>
+        </p>
+        Link:
+        <a href="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/aplicacao#!/recursos/Moedas#eyJmb3JtdWxhcmlvIjp7IiRmb3JtYXQiOiJqc29uIiwiJHRvcCI6MTAwfSwicHJvcHJpZWRhZGVzIjpbMCwxLDJdLCJwZXNxdWlzYWRvIjp0cnVlLCJhY3RpdmVUYWIiOiJ0YWJsZSIsImdyaWRTdGF0ZSI6ewMwAzpbewNCAyIEMAQiLANBA30sewNCAyIEMQQiLANBA30sewNCAyIEMgQiLANBA31dLAMxAzp7fSwDMgM6W10sAzMDOnt9LAM0Azp7fSwDNQM6e319LCJwaXZvdE9wdGlvbnMiOnsDYQM6e30sA2IDOltdLANjAzo1MDAsA2QDOltdLANlAzpbXSwDZgM6W10sA2cDOiJrZXlfYV90b196IiwDaAM6ImtleV9hX3RvX3oiLANpAzp7fSwDagM6e30sA2sDOjg1LANsAzpmYWxzZSwDbQM6e30sA24DOnt9LANvAzoiQ29udGFnZW0iLANwAzoiVGFibGUifX0=" class="btn btn-primary">Aqui</a>
+        | <a href="https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json&$select=simbolo,nomeFormatado,tipoMoeda" class="btn btn-success">API</a>
+    </div>
+</div>
+<hr />
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">JSON da API</h5>
+        <a href="@Url.Action("GetJson", "Bcb")" class="btn btn-primary">Ver JSON</a>
+    </div>
 </div>
 
-<div>
-    <a href="@Url.Action("Get2XML", "Bcb")" class="btn btn-primary">Carregar XML</a>
+<hr />
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Converter JSON para XML</h5>
+        <a href="@Url.Action("Get2XML", "Bcb")" class="btn btn-primary">Carregar XML</a>
+    </div>
 </div>
 
-<div>
-    <a href="@Url.Action("GetJson", "Bcb")" class="btn btn-primary">Ver JSON</a>
+<hr />
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Baixar arquivo XML da conversão</h5>
+        <a href="@Url.Action("GetXML", "Bcb")" class="btn btn-primary">Baixar arquivo XML</a>
+    </div>
 </div>
+
+
