@@ -11,7 +11,7 @@ namespace Web_Json_to_XML.Controllers
 {
     public class BcbController : Controller
     {
-        // XML
+        // Botão para converter para XML
         public async Task<IActionResult> GetXML()
         {
             using (var httpClient = new HttpClient())
@@ -25,20 +25,53 @@ namespace Web_Json_to_XML.Controllers
 
                     // Serializa o objeto MoedasViewModel para XML
                     var serializer = new XmlSerializer(typeof(MoedasViewModel));
-                    using (var stringWriter = new StringWriter())
+                    var ms = new MemoryStream();
+                    using (var xmlWriter = XmlWriter.Create(ms, new XmlWriterSettings { Encoding = System.Text.Encoding.UTF8 }))
                     {
-                        using (var xmlWriter = XmlWriter.Create(stringWriter))
-                        {
-                            serializer.Serialize(xmlWriter, moedasViewModel);
-                            ViewBag.Xml = stringWriter.ToString();
-                        }
+                        serializer.Serialize(xmlWriter, moedasViewModel);
                     }
+
+                    ms.Seek(0, SeekOrigin.Begin);
+
+                    // retorna o XML como um arquivo
+                    return File(ms, "application/xml", "arquivo.xml");
                 }
             }
-
-            return Content(ViewBag.Xml, "application/xml");
         }
 
+        // Botão para visualizar conversão XML
+        public async Task<IActionResult> Get2XML()
+        {
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://olinda.bcb.gov.br/olinda/servico/PTAX/versao/v1/odata/Moedas?$top=100&$format=json&$select=simbolo,nomeFormatado,tipoMoeda"))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+
+                    // Deserializa a resposta da API JSON para objeto MoedasViewModel
+                    var moedasViewModel = JsonConvert.DeserializeObject<MoedasViewModel>(apiResponse);
+
+                    // Serializa o objeto MoedasViewModel para XML
+                    var serializer = new XmlSerializer(typeof(MoedasViewModel));
+                    var ms = new MemoryStream();
+                    using (var xmlWriter = XmlWriter.Create(ms, new XmlWriterSettings { Encoding = System.Text.Encoding.UTF8 }))
+                    {
+                        serializer.Serialize(xmlWriter, moedasViewModel);
+                    }
+
+                    ms.Seek(0, SeekOrigin.Begin);
+                    var sr = new StreamReader(ms);
+                    var xmlString = sr.ReadToEnd();
+
+                    // retorna o XML dentro de uma tag <code>
+                    return Content(xmlString, "text/plain");
+                }
+            }
+        }
+
+
+
+        //JSON
         public async Task<IActionResult> GetJson()
         {
             using (var httpClient = new HttpClient())
