@@ -1,0 +1,20 @@
+﻿@model string
+
+@{
+    ViewData["bcbView"] = "Moedas do BCB em XML";
+}
+
+<h1>Moedas</h1>
+
+<p>Clique no botão abaixo para obter as moedas em formato XML:</p>
+
+<form method="post" action="@Url.Action("Index", "Bcb")">
+    <button type="submit">Obter moedas em formato XML</button>
+</form>
+
+@if (ViewBag.Xml != null)
+{
+    <hr />
+    <h2>Moedas em formato XML</h2>
+    <pre>@Html.Raw(ViewBag.Xml)</pre>
+}

@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{5E8A6775-AEA2-4F91-B87B-5F2EEA3E1E0B}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web_Json_to_XML/Controllers/PTAXController.cs">
+    <Files>
+      <File FileName="Web_Json_to_XML/Models/PTAXModel.cs" Line="5" Column="6" IsPinned="True" />
+      <File FileName="Web_Json_to_XML/Views/Home/GerarXml.cshtml" Line="9" Column="46" IsPinned="True" />
+      <File FileName="Web_Json_to_XML/Views/Home/Index.cshtml" Line="1" Column="3" />
+      <File FileName="Web_Json_to_XML/Controllers/PTAXController.cs" Line="17" Column="41" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Web_Json_to_XML" expanded="True">
+            <Node name="Web_Json_to_XML" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="PTAXController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Web__Json__to__XML PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+</Properties>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Web_Json_to_XML.props" />
+</Project>
