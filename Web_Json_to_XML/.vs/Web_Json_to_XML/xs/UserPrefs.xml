@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{5E8A6775-AEA2-4F91-B87B-5F2EEA3E1E0B}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Web_Json_to_XML/Controllers/PTAXController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Web_Json_to_XML/Controllers/bcbController.cs">
     <Files>
-      <File FileName="Web_Json_to_XML/Models/PTAXModel.cs" Line="5" Column="6" IsPinned="True" />
-      <File FileName="Web_Json_to_XML/Views/Home/GerarXml.cshtml" Line="9" Column="46" IsPinned="True" />
-      <File FileName="Web_Json_to_XML/Views/Home/Index.cshtml" Line="1" Column="3" />
-      <File FileName="Web_Json_to_XML/Controllers/PTAXController.cs" Line="17" Column="41" />
+      <File FileName="Web_Json_to_XML/Views/Shared/_Layout.cshtml" Line="28" Column="57" />
+      <File FileName="Web_Json_to_XML/Views/Home/Index.cshtml" Line="6" Column="178" />
+      <File FileName="Web_Json_to_XML/Views/Home/bcbView.cshtml" Line="47" Column="63" />
+      <File FileName="Web_Json_to_XML/Controllers/bcbController.cs" Line="3" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -13,12 +13,13 @@
           <Node name="Web_Json_to_XML" expanded="True">
             <Node name="Web_Json_to_XML" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="PTAXController.cs" selected="True" />
+                <Node name="bcbController.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="Home" expanded="True" />
-                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
               </Node>
             </Node>
           </Node>
